@@ -1,7 +1,0 @@
-boto3
-cerfifi
-chardet
-config
-connexion[swagger-ui]
-cryptography
-coverage
