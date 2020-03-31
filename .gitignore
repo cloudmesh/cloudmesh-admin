@@ -1,10 +1,16 @@
-Makefilee
-*.pye
-.idea
+.pye
+.DS_Store
+.swp
+build/
+vagrant_workspace
+>>>>>>> from-cloudmesh-cloud
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+.ipynb_*
+
+cm4/api/specs/
 
 # C extensions
 *.so
@@ -23,9 +29,11 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -47,6 +55,10 @@ nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+*.cover
+.hypothesis/
+.pytest_cache/
+.noseids
 
 # Translations
 *.mo
@@ -55,6 +67,7 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+db.sqlite3
 
 # Flask stuff:
 instance/
@@ -69,7 +82,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
@@ -90,3 +103,35 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# Visual Studio Code workspace settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
