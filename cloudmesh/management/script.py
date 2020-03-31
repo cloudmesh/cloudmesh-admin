@@ -3,14 +3,14 @@ A convenient method to execute shell commands and return their output. Note:
 that this method requires that the command be completely executed before the
 output is returned. For many activities in cloudmesh this is sufficient.
 """
+import os
 import subprocess
 import textwrap
 from sys import platform
-from cloudmesh.common.Shell import Shell
-from cloudmesh.common.console import Console
 
 import psutil
-import os
+from cloudmesh.common.Shell import Shell
+from cloudmesh.common.console import Console
 
 
 class SystemPath(object):
@@ -75,9 +75,11 @@ class SystemPath(object):
         elif platform == "windows":
             script = None
             # TODO: BUG: Implement.
-            # Current workaround functiosn as follows. We could even make this the default model,
+            # Current workaround functiosn as follows. We could even make this
+            # the default model,
             # e.g. take the path from cloudmesh.yaml
-            # in windows we added the path to mongod and mongo from the cloudmesh.yaml file
+            # in windows we added the path to mongod and mongo from the
+            # cloudmesh.yaml file
         # noinspection PyUnusedLocal
         if script is not None:
             installer = Script.run(script)
@@ -123,7 +125,8 @@ def find_process(name):
     """ find a process by name
 
     :param name: the name of the process
-    :return: A list of dicts in which the attributes pid, command, and created are available and the name matches
+    :return: A list of dicts in which the attributes pid, command,
+             and created are available and the name matches
              the specified name argument.
 
     TODO: at one point this should be moved to cloudmesh.common

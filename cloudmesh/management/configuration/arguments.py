@@ -2,7 +2,6 @@ from cloudmesh.common.console import Console
 from cloudmesh.common.parameter import Parameter
 from cloudmesh.configuration.Config import Active
 
-
 class Arguments(object):
 
     @staticmethod
