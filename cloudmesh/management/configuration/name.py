@@ -162,7 +162,7 @@ class Name(dotdict):
         self.__dict__["counter"] += 1
         self.flush()
 
-    def get(self):
+    def name(self):
         self.__str__()
 
 name = Name()
