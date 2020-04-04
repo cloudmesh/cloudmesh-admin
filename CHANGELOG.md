@@ -7,6 +7,13 @@ Intermediate release 4.3.9
 
 #### Enhancements and Changes
 
+- Getting the sample and output from provides via a command
+
+  `cms provider info compute openstack sample`
+  `cms provider info compute openstack output`
+  `cms provider list --output=json`
+  `cms provider list`
+
 - added a list command to list cloudmesh providers
 
   `cms provider list`
