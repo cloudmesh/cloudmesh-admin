@@ -56,14 +56,13 @@ class Arguments(object):
     @staticmethod
     def get_names(arguments, variables):
         names = arguments.get("NAME") or arguments.get(
-            "NAMES") or arguments.get(
-            "--name") or variables["vm"]
-        # TODO: bug this only works for vm, but not images and so on
+            "NAMES") or arguments.get("--name") or variables["vm"]
+        # TODO: this only works for vm, but not images and so on
         if names is None:
             # this is a temporary patch for "image list --cloud=XX --refresh" so not to print the error
             if arguments.cloud and arguments.refresh and arguments.list:
                 return None
-            Console.error("you need to specify a vm")
+            Console.warning("you need to specify a vm to use automatic vm name completion.")
             return None
         else:
             return Parameter.expand(names)
