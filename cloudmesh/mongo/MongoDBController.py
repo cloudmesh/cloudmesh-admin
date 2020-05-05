@@ -207,6 +207,11 @@ class MongoInstaller(object):
             installer = Script.run(script)
 
         Console.info("MongoDB installation successful!")
+        print()
+        Console.info("Activate it with \n\n"
+                     f"export PATH={self.mongo_home}/bin:$PATH\n\n"
+                     "We also added this to ~/.bashrc\n")
+        print()
 
     # noinspection PyUnusedLocal
     def darwin(self, brew=False):
