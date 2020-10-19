@@ -1,15 +1,18 @@
-Documentation
-=============
+# Cloudmesh Admin
 
+[![Version](https://img.shields.io/pypi/v/cloudmesh-admin.svg)](https://pypi.org/project/cloudmesh-admin/)
+[![Python](https://img.shields.io/pypi/pyversions/cloudmesh-admin.svg)](https://pypi.python.org/pypi/cloudmesh-admin)
+[![Format](https://img.shields.io/pypi/format/cloudmesh-admin.svg)](https://pypi.python.org/pypi/cloudmesh-admin)
+[![Status](https://img.shields.io/pypi/status/cloudmesh-admin.svg)](https://pypi.python.org/pypi/cloudmesh-admin)
+[![License](https://img.shields.io/pypi/l/cloudmesh-admin.svg)](https://pypi.python.org/pypi/cloudmesh-admin/)
 
-[![image](https://img.shields.io/travis/TankerHQ/cloudmesh-bar.svg?branch=master)](https://travis-ci.org/TankerHQ/cloudmesn-bar)
+<!-- 
+[![Travis](https://travis-ci.com/cloudmesh/cloudmesh-admin.svg?branch=master)](https://travis-ci.com/cloudmesh/cloudmesh-admin)
+-->
 
-[![image](https://img.shields.io/pypi/pyversions/cloudmesh-bar.svg)](https://pypi.org/project/cloudmesh-bar)
+Cloudmesh admin introduces a convenient way to install and manage the backend database for cloudmesh.
 
-[![image](https://img.shields.io/pypi/v/cloudmesh-bar.svg)](https://pypi.org/project/cloudmesh-bar/)
+For details about cloudmesh, please refer to 
 
-[![image](https://img.shields.io/github/license/TankerHQ/python-cloudmesh-bar.svg)](https://github.com/TankerHQ/python-cloudmesh-bar/blob/master/LICENSE)
+* https://github.com/cloudmesh/cloudmesh-manual
 
-see cloudmesh.cmd5
-
-* https://github.com/cloudmesh/cloudmesh.cmd5
