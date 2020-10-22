@@ -28,7 +28,7 @@ class MongoInstaller(object):
 
     def __init__(self, dryrun=False, force=False):
         """
-        Initialization of the MOngo installer
+        Initialization of the Mongo installer
         """
 
         self.dryrun = dryrun
@@ -118,13 +118,22 @@ class MongoInstaller(object):
             self.local = self.data["LOCAL"]
             if self.machine == 'linux':
                 self.linux()
+                Console.warning(f"To activate, please source the ~/.bashrc file and make sure that {self.mongo_home} is in the path")
             elif self.machine == 'darwin':
                 self.darwin()
+                Console.warning(f"To activate, please source the ~/.bashrc or ~/.zprofile file and make sure that {self.mongo_home} is in the path")
             elif self.machine == 'win32':  # Replaced windows with win32
                 self.windows()
+                Console.warning(f"Please open a new terminal to activate the settings.")
             else:
                 print("platform not found", platform)
         elif os.path.isdir(self.mongo_home):
+            print()
+            Console.msg("If you like a reinstall, pleas use")
+            print()
+            Console.msg("    cms admin mongo  install --force")
+            print()
+
             Console.error(f"Folder {self.mongo_home} already exists")
 
     # noinspection PyUnusedLocal
