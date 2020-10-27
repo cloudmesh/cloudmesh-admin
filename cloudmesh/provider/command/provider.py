@@ -10,8 +10,8 @@ from cloudmesh.shell.command import command, map_parameters
 
 class ProviderCommand(PluginCommand):
 
-    # see https://github.com/cloudmesh/client/blob/master/cloudmesh_client/shell/plugins/KeyCommand.py
-    # see https://github.com/cloudmesh/client/blob/master/cloudmesh_client/shell/plugins/AkeyCommand.py
+    # see https://github.com/cloudmesh/client/blob/main/cloudmesh_client/shell/plugins/KeyCommand.py
+    # see https://github.com/cloudmesh/client/blob/main/cloudmesh_client/shell/plugins/AkeyCommand.py
 
     # noinspection PyUnusedLocal
     @command

@@ -92,7 +92,7 @@ class Source(object):
             version = f.read().strip()
         script = f''''
                     git tag "v{version}"
-                    git push origin master --tags
+                    git push origin main --tags
                     python setup.py sdist bdist_wheel
                     twine check dist/*
                     twine upload --repository pypi dist/*
