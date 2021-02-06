@@ -132,7 +132,7 @@ class Name(dotdict):
             config = Config()
             user = config["cloudmesh.profile.user"]
             if user == "TBD":
-                print ("WARNING: please set cloudmesh.profile.user we found TBD")
+                print("WARNING: please set cloudmesh.profile.user we found TBD")
             data = {
                 'counter': 1,
                 'kind': 'vm',
@@ -164,5 +164,6 @@ class Name(dotdict):
 
     def name(self):
         self.__str__()
+
 
 name = Name()
