@@ -92,9 +92,9 @@ class Test_Compute_Database:
         HEADING()
 
         result = run("db add key", f"cms key add {user} "
-                                   f"--source=ssh", service="local")
+                                   "--source=ssh", service="local")
         Benchmark.Start()
-        result = run("db list ", f"cms key list", service="local")
+        result = run("db list ", "cms key list", service="local")
         Benchmark.Stop()
         VERBOSE(result)
 
@@ -104,12 +104,11 @@ class Test_Compute_Database:
         HEADING()
 
         Benchmark.Start()
-        result = Shell.run_timed("cms key upload",
-                                 f"cms key upload {user}")
+        result = Shell.run_timed("cms key upload", f"cms key upload {user}")
         Benchmark.Stop()
         result = Shell.run_timed("cms list", f"cms key upload {user}")
 
-        "cms key list --cloud=chameleon"
+        # "cms key list --cloud=chameleon"
         VERBOSE(result)
 
     def test_list_variables(self):
@@ -119,7 +118,7 @@ class Test_Compute_Database:
         pprint(provider.cloudtype)
         pprint(provider.spec)
 
-    def test_list_keys(self):
+    def test_list_keys_2(self):
         HEADING()
         Benchmark.Start()
         self.keys = provider.keys()

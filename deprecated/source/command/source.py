@@ -61,7 +61,7 @@ class SourceCommand(PluginCommand):
 
         map_parameters(arguments, "source", "protocol")
 
-        config = Config()["cloudmesh.source"]
+        config = Config()
         m = Source(config, protocol=arguments.protocol)
 
         if arguments.list:

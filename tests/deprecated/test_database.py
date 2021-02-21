@@ -39,12 +39,12 @@ class TestMongo:
         r = database.find_name("CC-CentOS7")
         pprint(r)
 
-    def test_find_in_collections(self):
+    def test_find_in_collections_1(self):
         HEADING()
         r = database.find_names("CC-CentOS7,CC-CentOS7-1811")
         pprint(r)
 
-    def test_find_in_collection(self):
+    def test_find_in_collection_2(self):
         HEADING()
         r = database.name_count("CC-CentOS7")
         pprint(r)
@@ -143,7 +143,7 @@ class TestMongo:
             pprint(d)
             return d
 
-        a = entry()
+        a = entry()   # noqa: F841
 
         r = database.find_by_counter(3)
 

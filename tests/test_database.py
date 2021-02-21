@@ -100,7 +100,7 @@ class TestDatabaseUpdate:
         HEADING()
         cm = CmDatabase()
         Benchmark.Start()
-        collection = cm.clear(collection="debug-file")
+        collection = cm.clear(collection="debug-file")  # noqa: F841
         Benchmark.Stop()
 
     def test_benchmark(self):
