@@ -42,9 +42,7 @@ class ProviderCommand(PluginCommand):
                cms provider list --output=json
                cms provider list
 
-        """
-
-
+q        """
 
         map_parameters(arguments, 'output')
 
@@ -60,23 +58,17 @@ class ProviderCommand(PluginCommand):
 
                     try:
 
-                        if provider['service'] == service and \
-                            provider['name'] == name:
+                        if provider['service'] == service and provider['name'] == name:
 
                             if arguments.WHAT == 'sample':
                                 print(textwrap.dedent(
                                     provider["provider"].sample))
                             elif arguments.WHAT == 'output':
-                                print(json.dumps(provider["provider"].output,
-                                                 indent=4))
+                                print(json.dumps(provider["provider"].output, indent=4))
                                 print()
-
 
                     except Exception as e:
                         print(e)
-
-
-
 
             except:
                 Console.error("Problem getting the Provider info")

@@ -1,5 +1,4 @@
 import json
-import json
 import os
 import subprocess
 import sys
@@ -124,7 +123,7 @@ class MongoInstaller(object):
                 Console.warning(f"To activate, please source the ~/.bashrc or ~/.zprofile file and make sure that {self.mongo_home} is in the path")
             elif self.machine == 'win32':  # Replaced windows with win32
                 self.windows()
-                Console.warning(f"Please open a new terminal to activate the settings.")
+                Console.warning("Please open a new terminal to activate the settings.")
             else:
                 print("platform not found", platform)
         elif os.path.isdir(self.mongo_home):

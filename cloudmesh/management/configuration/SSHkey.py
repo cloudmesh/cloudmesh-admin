@@ -81,8 +81,6 @@ class SSHkey(dict):
         }
         self = self._update_dict(self['name'], self)
 
-
-
     def set_permissions(self, path):
         """
         Sets the permissions of the path assuming the path is a public or private key

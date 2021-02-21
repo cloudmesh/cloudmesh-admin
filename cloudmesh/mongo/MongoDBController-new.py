@@ -1,9 +1,6 @@
 import json
-import json
 import os
 import subprocess
-import urllib.parse
-import urllib.parse
 import urllib.parse
 from subprocess import STDOUT
 from sys import platform
@@ -312,7 +309,7 @@ class MongoDBController(object):
     mongod --port {MONGO_PORT} --bind_ip {MONGO_HOST} --dbpath {MONGO_PATH}/{MONGO_DBNAME}
 
 
-    2. pip scriptadmin to 
+    2. pip scriptadmin to
 
     mongo --port 27017
 
@@ -576,7 +573,6 @@ class MongoDBController(object):
             except Exception as e:
                 print(e)
                 return
-
 
         else:
             script = """mongo --eval 'db.getSiblingDB("admin").createUser({{user:"{MONGO_USERNAME}",pwd:"{MONGO_PASSWORD}",roles:[{{role:"root",db:"admin"}}]}})'""".format(

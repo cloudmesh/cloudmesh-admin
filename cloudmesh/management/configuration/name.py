@@ -85,8 +85,7 @@ class Name(dotdict):
 
         config = Config()
 
-        self.path = path_expand(kwargs.get("path") or
-                                f"{config.location}/name.yaml")
+        self.path = path_expand(kwargs.get("path") or f"{config.location}/name.yaml")
 
         data = self.load(self.path)
         self.assign(data)

@@ -26,7 +26,7 @@ class AdminCommand(PluginCommand):
         +-------------------------------------------------------+
         |                  Cloudmesh CMD5 Shell                 |
         +-------------------------------------------------------+
-        """)
+        """)  # noqa: W605
 
     # noinspection PyUnusedLocal
     @command
@@ -256,7 +256,6 @@ class AdminCommand(PluginCommand):
                     mode = config["cloudmesh.data.mongo.MODE"]
                     print(mode)
                     return ""
-
 
         elif arguments.status:
 
